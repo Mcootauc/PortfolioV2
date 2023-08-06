@@ -1,0 +1,166 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+  --black: #101014;
+  --dkblue: #88a3e2;
+  --pink: #fc8dca;
+  --purple: #c37edb;
+  --violet: #b7a6f6;
+  --ltblue: #aaecfc;
+  --white: #ebebf0;
+  --font-size: 1.3rem;
+  --montserrat: Montserrat;
+  --barlow: Barlow Condensed;
+}
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--barlow);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+a {
+  color: var(--ltblue);
+}
+a:hover {
+  color: var(--pink);
+  text-decoration: none;
+}
+
+/* intro styles */
+#intro {
+  padding-bottom: 5rem;
+}
+
+#intro p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+#intro .name {
+  font-family: var(--barlow);
+  font-size: 1.5rem;
+}
+
+.name span {
+  font-family: var(--montserrat);
+  font-size: 4rem;
+  color: var(--ltblue);
+  display: block;
+  font-weight: 300;
+}
+
+#intro h2 {
+  font-size: 4rem;
+}
+
+/* contact section */
+#contact {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+#contact .email {
+  margin-top: 3rem;
+}
+
+/* nav section */
+nav {
+  font-family: var(--montserrat);
+  font-size: 80%;
+  padding: 1rem;
+}
+
+nav h1 a {
+  font-family: var(--barlow);
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+nav [class*="fa-"] {
+  font-size: 150%;
+  color: var(--ltblue);
+}
+
+nav h1 [class*="fa-"] {
+  font-size: 100%;
+  color: var(--ltblue);
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+}
+
+nav a:hover,
+nav [class*="fa-"]:hover {
+  color: var(--pink);
+}
+
+.button {
+  background-color: var(--purple);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.button:hover {
+  color: var(--white);
+  background-color: var(--pink);
+}
+
+footer {
+  text-align: center;
+}
+
+footer ul {
+  padding: 0;
+  margin: 2rem 0;
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 850px) {
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  nav li:first-child {
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}
