@@ -192,6 +192,13 @@ nav [class*="fa-"]:hover {
   font-family: var(--montserrat);
   margin: 0;
 }
+
+#projects p {
+  font-size: 0.85rem;
+  font-family: var(--montserrat);
+  margin: 0;
+}
+
 .blackbox {
   padding: 1rem;
   border-radius: 10px;
