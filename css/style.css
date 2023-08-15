@@ -120,7 +120,7 @@ a:hover {
   justify-content: center;
 }
 
-form {
+.container form {
   background: var(--white);
   display: flex;
   flex-direction: column;
@@ -130,13 +130,13 @@ form {
   border-radius: 10px;
 }
 
-form h3 {
+.container form h3 {
   color: var(--black);
   font-weight: 800;
   margin-bottom: 20px;
 }
 
-form input,
+.container form input,
 form textarea {
   font: var(--montserrat);
   border: 0;
@@ -147,7 +147,7 @@ form textarea {
   font-size: 1rem;
 }
 
-form button {
+.container form button {
   padding: 15px;
   background: var(--blueButton);
   color: #fff;
@@ -160,7 +160,7 @@ form button {
   border-radius: 30px;
 }
 
-form button:hover {
+.container form button:hover {
   background: var(--blueHover);
 }
 
