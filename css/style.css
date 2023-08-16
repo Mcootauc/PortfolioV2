@@ -128,6 +128,7 @@ a:hover {
     width: 90%;
     max-width: 600px;
     border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 .container form h3 {
