@@ -39,12 +39,9 @@ h2,
 h3 {
     margin: 0;
 }
-a {
-    color: var(--blueTitle);
-}
-a:hover {
-    color: var(--ltblue);
-    text-decoration: none;
+
+h2 {
+    text-shadow: 4px 4px 4px var(--black);
 }
 
 /* background color divs */
@@ -212,7 +209,6 @@ nav a:hover,
 nav [class*='fa-']:hover {
     color: var(--ltblue);
 }
-
 .button {
     background-color: var(--blueButton);
     color: var(--white);
@@ -276,7 +272,21 @@ nav [class*='fa-']:hover {
     border-top: 1px solid var(--white);
     border-radius: 25px;
 }
+#projects .githubButton {
+    padding: 1rem 0 0 0;
+    font-size: 45px;
+    text-decoration: none;
+}
+#projects .githubButton a {
+    text-decoration: none;
+    color: var(--black);
+}
 
+#projects .githubButton a:hover {
+    color: var(--ltblue);
+}
+
+/* footer section */
 footer {
     text-align: center;
     padding: 4rem 0;
