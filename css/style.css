@@ -272,6 +272,14 @@ nav [class*='fa-']:hover {
     border-top: 1px solid var(--white);
     border-radius: 25px;
 }
+#projects iframe {
+    width: 100%;
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    border-radius: 25px;
+}
 #projects .githubButton {
     padding: 1rem 0 0 0;
     font-size: 45px;
@@ -330,6 +338,11 @@ footer [class*='fa-']:hover {
         margin: 0 auto;
     }
     #projects img {
+        width: 100%;
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    #projects iframe {
         width: 100%;
         grid-column: 1/6;
         grid-row: 1/2;
