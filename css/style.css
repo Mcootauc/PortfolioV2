@@ -81,6 +81,12 @@ h2 {
     width: 8%;
 }
 
+#intro .profileImage {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 #intro .profileImage img {
     width: 85%;
     margin: 0 0 0 0;
@@ -205,10 +211,19 @@ nav a {
     display: block;
 }
 
+nav .fa-solid.fa-code:hover {
+    color: var(--blueButton);
+}
+
+nav #homeButton:hover {
+    color: var(--ltblue);
+}
+
 nav a:hover,
 nav [class*='fa-']:hover {
     color: var(--ltblue);
 }
+
 .button {
     background-color: var(--blueButton);
     color: var(--white);
@@ -326,7 +341,6 @@ footer [class*='fa-']:hover {
         gap: 5rem;
     }
     #intro .profileImage {
-        margin: 4rem 0 0 0;
         text-align: end;
     }
     article {
