@@ -92,8 +92,8 @@ h2 {
     width: 85%;
     margin: 0 0 0 0;
     padding: 1rem;
-    border-left: 1px solid var(--white);
     border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
     border-radius: 25px;
 }
 
