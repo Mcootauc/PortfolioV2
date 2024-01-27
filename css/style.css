@@ -178,7 +178,7 @@ form textarea {
 nav {
     font-family: var(--montserrat);
     font-size: 80%;
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
 }
 
 nav h1 a {
@@ -250,10 +250,12 @@ nav [class*='fa-']:hover {
     margin-bottom: calc(2.5rem * 1.5);
 }
 #projects h3 {
+    font-size: 2rem;
     color: var(--ltblue);
 }
 
 #projects h4 {
+    padding: 1rem 0 0.5rem 0;
     font-size: 1rem;
     font-family: var(--montserrat);
     margin: 0;
@@ -287,16 +289,16 @@ nav [class*='fa-']:hover {
     width: 100%;
     margin: 2rem 0 4rem 0;
     padding: 1rem;
-    border-left: 1px solid var(--white);
     border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
     border-radius: 25px;
 }
 #projects iframe {
     width: 100%;
     margin: 2rem 0 4rem 0;
     padding: 1rem;
-    border-left: 1px solid var(--white);
     border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
     border-radius: 25px;
 }
 #projects .githubButton {
@@ -349,7 +351,7 @@ footer [class*='fa-']:hover {
     }
     article {
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(11, 1fr);
     }
     #projects {
         max-width: 1200px;
@@ -366,7 +368,8 @@ footer [class*='fa-']:hover {
         grid-row: 1/2;
     }
     .text {
-        grid-column: 5/11;
+        margin-top: 1.5rem;
+        grid-column: 7/12;
         grid-row: 1/2;
         order: 2;
         text-align: right;
@@ -375,12 +378,17 @@ footer [class*='fa-']:hover {
         justify-content: flex-end;
     }
     #projects .reverse .text {
-        grid-column: 1/7;
+        margin-top: 1.5rem;
+        grid-column: 1/6;
         order: 2;
         text-align: left;
     }
     #projects .reverse img {
-        grid-column: 6/11;
+        grid-column: 7/12;
+        grid-row: 1/2;
+    }
+    #projects .reverse iframe {
+        grid-column: 7/12;
         grid-row: 1/2;
     }
     #projects .reverse ul {
