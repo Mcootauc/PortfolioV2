@@ -1,0 +1,254 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --white: #ebebf0;
+    --ltblue: #91bbf2;
+    --blueHover: #2d84d0;
+    --ltBlueBackground: #024681;
+    --blueBackground: #02315a;
+    --blueTitle: #035aa6;
+    --blueButton: #0367a6;
+    --navy: #273273;
+    --dkblue: #131a40;
+    --black: #101014;
+    --font-size: 1.3rem;
+    --montserrat: Montserrat;
+    --barlow: Barlow Condensed;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--barlow);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h2 {
+    text-shadow: 4px 4px 4px var(--black);
+}
+
+/* background color divs */
+.section-dkblue {
+    padding: 3rem 0 6rem 0;
+    background-color: var(--blueBackground);
+}
+.section-navy {
+    background-color: var(--ltBlueBackground);
+}
+
+/* nav section */
+nav {
+    font-family: var(--montserrat);
+    font-size: 80%;
+    padding: 2rem 1rem;
+}
+
+nav h1 a {
+    font-family: var(--montserrat);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*='fa-'] {
+    font-size: 150%;
+    color: var(--blueButton);
+}
+
+nav h1 [class*='fa-'] {
+    font-size: 100%;
+    color: var(--blueButton);
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav .fa-solid.fa-code:hover {
+    color: var(--blueButton);
+}
+
+nav #homeButton:hover {
+    color: var(--ltblue);
+}
+
+nav a:hover,
+nav [class*='fa-']:hover {
+    color: var(--ltblue);
+}
+
+.button {
+    background-color: var(--blueButton);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--montserrat);
+    text-decoration: none;
+}
+.button:hover {
+    color: var(--white);
+    background-color: var(--blueHover);
+}
+
+.blackbox {
+    border-radius: 10px;
+    color: white;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+hr {
+    border: none; /* Remove default border */
+    height: 3px; /* Set the height of the line */
+    background-color: var(--white); /* Set the color of the line */
+    margin: 1rem 0; /* Add some space above and below the line */
+}
+
+/* About Me section */
+#offer-oasis {
+    padding: 1rem 1rem;
+}
+#offer-oasis h2 {
+    font-size: 2.5rem;
+}
+#offer-oasis h3 {
+    font-size: 2rem;
+}
+#offer-oasis p {
+    font-size: 0.85rem;
+    font-family: var(--montserrat);
+    margin: 0;
+}
+#offer-oasis ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+#offer-oasis img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+    border-radius: 25px;
+}
+
+/* footer section */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+footer ul {
+    padding: 0;
+    margin: 2rem 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+footer [class*='fa-'] {
+    color: var(--blueButton);
+}
+
+footer [class*='fa-']:hover {
+    color: var(--ltblue);
+}
+
+@media (min-width: 800px) {
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+    #intro .profileImage {
+        text-align: end;
+    }
+    article {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+    }
+    #projects {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .text {
+        margin-top: 1.5rem;
+        grid-column: 7/12;
+        grid-row: 1/2;
+        order: 2;
+        text-align: left;
+    }
+
+    #offer-oasis {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    #offer-oasis img {
+        width: 100%;
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    #offer-oasis ul {
+        justify-content: flex-end;
+    }
+    #offer-oasis .reverse .text {
+        margin-top: 1.5rem;
+        grid-column: 1/6;
+        order: 2;
+        text-align: left;
+    }
+    #offer-oasis .reverse img {
+        grid-column: 7/12;
+        grid-row: 1/2;
+    }
+    #offer-oasis .reverse ul {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}

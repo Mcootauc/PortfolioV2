@@ -46,25 +46,16 @@ h2 {
 
 /* background color divs */
 .section-dkblue {
-    padding: 4rem 0;
+    padding: 4rem 0 8rem 0;
     background-color: var(--blueBackground);
 }
 .section-navy {
     background-color: var(--ltBlueBackground);
 }
 
-.gradient {
-    background: linear-gradient(
-        90deg,
-        rgba(0, 153, 221, 1) 0%,
-        rgba(170, 236, 252, 1) 100%
-    );
-    height: 3px;
-}
-
 /* intro styles */
 #intro {
-    padding: 4rem 1rem 10rem 1rem;
+    padding: 5rem 1rem 10rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -107,6 +98,27 @@ h2 {
 
 #intro h2 {
     font-size: 4rem;
+}
+
+#work-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#work-container a,
+#work-container img {
+    border-radius: 0.7rem;
+    width: 100%; /* Ensure the image spans the full width of its container */
+    height: 100%; /* Ensure the image spans the full height of its container */
+    object-fit: cover; /* Resize the image to cover the container while preserving its aspect ratio */
+    object-position: center; /* Center the image within its container */
+}
+
+.blendify-image {
+    background-color: var(--black);
 }
 
 /* contact section */
@@ -243,9 +255,11 @@ nav [class*='fa-']:hover {
 
 /* projects section */
 #projects {
-    padding: 4rem 1rem;
+    padding: 4rem 0rem;
 }
 #projects h2 {
+    display: flex;
+    justify-content: center;
     font-size: 2.5rem;
     margin-bottom: calc(2.5rem * 1.5);
 }
@@ -261,12 +275,6 @@ nav [class*='fa-']:hover {
     margin: 0;
 }
 
-#projects p {
-    font-size: 0.85rem;
-    font-family: var(--montserrat);
-    margin: 0;
-}
-
 .blackbox {
     padding: 1rem;
     border-radius: 10px;
@@ -275,7 +283,25 @@ nav [class*='fa-']:hover {
     font-size: 1rem;
     line-height: 1.5;
 }
-#projects ul {
+
+/* About Me section */
+#about-me {
+    padding: 4rem 1rem;
+}
+#about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#about-me h3 {
+    font-size: 2rem;
+    color: var(--ltblue);
+}
+#about-me p {
+    font-size: 0.85rem;
+    font-family: var(--montserrat);
+    margin: 0;
+}
+#about-me ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -285,34 +311,13 @@ nav [class*='fa-']:hover {
     gap: 1rem;
     font-size: 1rem;
 }
-#projects img {
+#about-me img {
     width: 100%;
     margin: 2rem 0 4rem 0;
     padding: 1rem;
     border-top: 1px solid var(--white);
     border-bottom: 1px solid var(--white);
     border-radius: 25px;
-}
-#projects iframe {
-    width: 100%;
-    margin: 2rem 0 4rem 0;
-    padding: 1rem;
-    border-top: 1px solid var(--white);
-    border-bottom: 1px solid var(--white);
-    border-radius: 25px;
-}
-#projects .githubButton {
-    padding: 1rem 0 0 0;
-    font-size: 45px;
-    text-decoration: none;
-}
-#projects .githubButton a {
-    text-decoration: none;
-    color: var(--black);
-}
-
-#projects .githubButton a:hover {
-    color: var(--ltblue);
 }
 
 /* footer section */
@@ -354,19 +359,10 @@ footer [class*='fa-']:hover {
         grid-template-columns: repeat(11, 1fr);
     }
     #projects {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
     }
-    #projects img {
-        width: 100%;
-        grid-column: 1/6;
-        grid-row: 1/2;
-    }
-    #projects iframe {
-        width: 100%;
-        grid-column: 1/6;
-        grid-row: 1/2;
-    }
+
     .text {
         margin-top: 1.5rem;
         grid-column: 7/12;
@@ -374,24 +370,30 @@ footer [class*='fa-']:hover {
         order: 2;
         text-align: right;
     }
-    #projects ul {
+
+    #about-me {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    #about-me img {
+        width: 100%;
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    #about-me ul {
         justify-content: flex-end;
     }
-    #projects .reverse .text {
+    #about-me .reverse .text {
         margin-top: 1.5rem;
         grid-column: 1/6;
         order: 2;
         text-align: left;
     }
-    #projects .reverse img {
+    #about-me .reverse img {
         grid-column: 7/12;
         grid-row: 1/2;
     }
-    #projects .reverse iframe {
-        grid-column: 7/12;
-        grid-row: 1/2;
-    }
-    #projects .reverse ul {
+    #about-me .reverse ul {
         justify-content: flex-start;
     }
 }
