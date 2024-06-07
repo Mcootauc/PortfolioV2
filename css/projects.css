@@ -43,10 +43,13 @@ h3 {
 h2 {
     text-shadow: 4px 4px 4px var(--black);
 }
+#OfferOasis-title {
+    color: rgb(251, 197, 80);
+}
 
 /* background color divs */
 .section-dkblue {
-    padding: 3rem 0 6rem 0;
+    padding: 3rem 0 3rem 0;
     background-color: var(--blueBackground);
 }
 .section-navy {
@@ -120,35 +123,52 @@ nav [class*='fa-']:hover {
     background-color: var(--blueHover);
 }
 
-.blackbox {
-    border-radius: 10px;
+.description {
     color: white;
     font-size: 3rem;
     line-height: 1.5;
 }
+.categories,
+.category-details {
+    color: white;
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.categories {
+    color: rgb(251, 197, 80);
+}
+.categories .category,
+.category-details .detail {
+    display: block; /* Make sure each category is on its own line */
+    margin-bottom: 1rem; /* Add space between categories */
+}
+.categories .category {
+    font-weight: bold;
+}
+
 hr {
     border: none; /* Remove default border */
     height: 3px; /* Set the height of the line */
     background-color: var(--white); /* Set the color of the line */
-    margin: 1rem 0; /* Add some space above and below the line */
+    margin: 1.5rem 0 1rem 0; /* Add some space above and below the line */
 }
 
 /* About Me section */
-#offer-oasis {
+#project {
     padding: 1rem 1rem;
 }
-#offer-oasis h2 {
+#project h2 {
     font-size: 2.5rem;
 }
-#offer-oasis h3 {
+#project h3 {
     font-size: 2rem;
 }
-#offer-oasis p {
-    font-size: 0.85rem;
+#project p {
+    font-size: 1.5rem;
     font-family: var(--montserrat);
     margin: 0;
 }
-#offer-oasis ul {
+#project ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -158,7 +178,7 @@ hr {
     gap: 1rem;
     font-size: 1rem;
 }
-#offer-oasis img {
+#project img {
     width: 100%;
     margin: 0 0 2rem 0;
     border-radius: 25px;
@@ -202,43 +222,31 @@ footer [class*='fa-']:hover {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
     }
-    #projects {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .text {
+    .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
         margin-top: 1.5rem;
-        grid-column: 7/12;
-        grid-row: 1/2;
-        order: 2;
         text-align: left;
     }
+    .extra-details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        padding-right: 7rem;
+    }
 
-    #offer-oasis {
+    #project {
         max-width: 1200px;
         margin: 0 auto;
     }
-    #offer-oasis img {
+    #project img {
         width: 100%;
         grid-column: 1/6;
         grid-row: 1/2;
     }
-    #offer-oasis ul {
+    #project ul {
         justify-content: flex-end;
-    }
-    #offer-oasis .reverse .text {
-        margin-top: 1.5rem;
-        grid-column: 1/6;
-        order: 2;
-        text-align: left;
-    }
-    #offer-oasis .reverse img {
-        grid-column: 7/12;
-        grid-row: 1/2;
-    }
-    #offer-oasis .reverse ul {
-        justify-content: flex-start;
     }
 }
 @media (min-width: 850px) {
