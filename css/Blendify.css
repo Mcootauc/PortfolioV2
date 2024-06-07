@@ -55,8 +55,10 @@ h2 {
 .section-navy {
     background-color: var(--ltBlueBackground);
 }
-.blendify-image {
-    background-color: var(--black);
+img {
+    max-height: 550px; /* Set the maximum height */
+    width: auto; /* Ensure the width adjusts automatically */
+    object-fit: contain; /* Ensure the image fits within the container while maintaining its aspect ratio */
 }
 
 /* nav section */
