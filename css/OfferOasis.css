@@ -43,7 +43,7 @@ h3 {
 h2 {
     text-shadow: 4px 4px 4px var(--black);
 }
-#OfferOasis-title {
+#title {
     color: rgb(251, 197, 80);
 }
 
@@ -137,6 +137,7 @@ nav [class*='fa-']:hover {
 .categories {
     color: rgb(251, 197, 80);
 }
+
 .categories .category,
 .category-details .detail {
     display: block; /* Make sure each category is on its own line */
