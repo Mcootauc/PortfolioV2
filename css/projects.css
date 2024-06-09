@@ -22,6 +22,8 @@
 
 /* border box model: https://css-tricks.com/box-sizing/ */
 html {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 *,
@@ -190,6 +192,27 @@ nav [class*='fa-']:hover {
 }
 .babelBeautyCategories {
     color: var(--babelBeautyColor);
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+}
+.project-description .description {
+    padding-bottom: 1.3rem; /* Adjust this value as needed */
+}
+.project-description a {
+    align-items: flex-start;
+    text-decoration: none; /* Remove underline for all links */
+}
+#project-button {
+    font-family: var(--montserrat);
+    color: var(--white); /* Change the color to white */
+    font-size: 1.5rem;
+}
+
+#project-button:hover {
+    text-decoration: underline; /* Optionally, add underline on hover */
 }
 
 hr {
