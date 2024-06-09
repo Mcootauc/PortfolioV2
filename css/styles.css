@@ -34,6 +34,7 @@ body {
     background-color: var(--black);
     color: var(--white);
     font-size: var(--font-size);
+    animation: transitionIn 0.75s;
 }
 
 h1,
@@ -342,6 +343,17 @@ footer [class*='fa-'] {
 
 footer [class*='fa-']:hover {
     color: var(--ltblue);
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 800px) {

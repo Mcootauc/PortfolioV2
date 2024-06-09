@@ -39,6 +39,7 @@ body {
     background-color: var(--black);
     color: var(--white);
     font-size: var(--font-size);
+    animation: transitionIn 0.75s;
 }
 
 h1,
@@ -63,12 +64,19 @@ h2 {
 .section-navy {
     background-color: var(--ltBlueBackground);
 }
-img {
+.project-img {
     max-height: 550px; /* Set the maximum height */
     width: auto; /* Ensure the width adjusts automatically */
     object-fit: contain; /* Ensure the image fits within the container while maintaining its aspect ratio */
 }
-
+.sussyScript-examples {
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 iframe {
     max-height: 550px; /* Set the maximum height */
     width: 100%; /* Set the width to 100% of the container */
@@ -224,6 +232,7 @@ nav [class*='fa-']:hover {
 }
 
 hr {
+    width: 100%;
     border: none; /* Remove default border */
     height: 3px; /* Set the height of the line */
     background-color: var(--white); /* Set the color of the line */
@@ -255,11 +264,6 @@ hr {
     gap: 1rem;
     font-size: 1rem;
 }
-#project img {
-    width: 100%;
-    margin: 0 0 2rem 0;
-    border-radius: 25px;
-}
 
 /* footer section */
 footer {
@@ -284,6 +288,17 @@ footer [class*='fa-'] {
 
 footer [class*='fa-']:hover {
     color: var(--ltblue);
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (min-width: 800px) {
@@ -317,7 +332,7 @@ footer [class*='fa-']:hover {
         max-width: 1200px;
         margin: 0 auto;
     }
-    #project img {
+    .project-img {
         width: 100%;
     }
     #project ul {
