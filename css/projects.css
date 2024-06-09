@@ -2,14 +2,19 @@
 :root {
     --white: #ebebf0;
     --ltblue: #91bbf2;
-    --blueHover: #2d84d0;
-    --ltBlueBackground: #024681;
-    --blueBackground: #02315a;
-    --blueTitle: #035aa6;
-    --blueButton: #0367a6;
     --navy: #273273;
     --dkblue: #131a40;
     --black: #101014;
+    --blueHover: #2d84d0;
+    --blueBackground: #02315a;
+    --blueTitle: #035aa6;
+    --blueButton: #0367a6;
+    --offerOasisColor: #fbc550;
+    --liveSignLanguageColor: #ffcccc;
+    --blendifyColor: #8345d2;
+    --woodyClickColor: #b8e9cb;
+    --sussyScriptColor: #f06060;
+    --babelBeautyColor: #ff9696;
     --font-size: 1.3rem;
     --montserrat: Montserrat;
     --barlow: Barlow Condensed;
@@ -43,12 +48,13 @@ h3 {
 h2 {
     text-shadow: 4px 4px 4px var(--black);
 }
-#title {
-    color: rgb(255, 204, 204);
-}
 
 /* background color divs */
 .section-dkblue {
+    padding: 3rem 0 3rem 0;
+    background-color: var(--blueBackground);
+}
+.project-background {
     padding: 3rem 0 3rem 0;
     background-color: var(--blueBackground);
 }
@@ -60,6 +66,7 @@ img {
     width: auto; /* Ensure the width adjusts automatically */
     object-fit: contain; /* Ensure the image fits within the container while maintaining its aspect ratio */
 }
+
 /* nav section */
 nav {
     font-family: var(--montserrat);
@@ -138,10 +145,6 @@ nav [class*='fa-']:hover {
     font-size: 3rem;
     line-height: 1.5;
 }
-.categories {
-    color: rgb(255, 204, 204);
-}
-
 .categories .category,
 .category-details .detail {
     display: block; /* Make sure each category is on its own line */
@@ -149,6 +152,44 @@ nav [class*='fa-']:hover {
 }
 .categories .category {
     font-weight: bold;
+}
+
+#offerOasisTitle {
+    color: var(--offerOasisColor);
+}
+#liveSignLanguageTitle {
+    color: var(--liveSignLanguageColor);
+}
+#blendifyTitle {
+    color: var(--blendifyColor);
+}
+#woodyClickTitle {
+    color: var(--woodyClickColor);
+}
+#sussyScriptTitle {
+    color: var(--sussyScriptColor);
+}
+#babelBeautyTitle {
+    color: var(--babelBeautyColor);
+}
+
+.offerOasisCategories {
+    color: var(--offerOasisColor);
+}
+.liveSignLanguageCategories {
+    color: var(--liveSignLanguageColor);
+}
+.blendifyCategories {
+    color: var(--blendifyColor);
+}
+.woodyClickCategories {
+    color: var(--woodyClickColor);
+}
+.sussyScriptCategories {
+    color: var(--sussyScriptColor);
+}
+.babelBeautyCategories {
+    color: var(--babelBeautyColor);
 }
 
 hr {

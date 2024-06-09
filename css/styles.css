@@ -113,12 +113,9 @@ h2 {
     border-radius: 0.7rem;
     width: 100%; /* Ensure the image spans the full width of its container */
     height: 100%; /* Ensure the image spans the full height of its container */
+    max-height: 400px;
     object-fit: cover; /* Resize the image to cover the container while preserving its aspect ratio */
     object-position: center; /* Center the image within its container */
-}
-
-.blendify-image {
-    background-color: var(--black);
 }
 
 /* contact section */
