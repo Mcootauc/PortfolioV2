@@ -1,0 +1,462 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    --white: #ebebf0;
+    --ltblue: #91bbf2;
+    --blueHover: #2d84d0;
+    --ltBlueBackground: #024681;
+    --blueBackground: #02315a;
+    --blueTitle: #035aa6;
+    --blueButton: #0367a6;
+    --navy: #273273;
+    --dkblue: #131a40;
+    --black: #101014;
+    --font-size: 1.3rem;
+    --montserrat: Montserrat;
+    --barlow: Barlow Condensed;
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--barlow);
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    animation: transitionIn 0.75s;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h2 {
+    text-shadow: 4px 4px 4px var(--black);
+}
+
+/* background color divs */
+.section-dkblue {
+    padding: 4rem 0 8rem 0;
+    background-color: var(--blueBackground);
+}
+.section-navy {
+    background-color: var(--ltBlueBackground);
+}
+
+/* intro styles */
+#intro {
+    padding: 5rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#intro p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--barlow);
+    font-size: 1.5rem;
+}
+#intro img {
+    width: 8%;
+}
+
+#intro .profileImage {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#intro .profileImage img {
+    width: 85%;
+    margin: 0 0 0 0;
+    padding: 1rem;
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    border-radius: 25px;
+}
+
+.name span {
+    font-family: var(--montserrat);
+    font-size: 3.5rem;
+    color: var(--blueTitle);
+    display: block;
+    font-weight: 300;
+}
+
+#intro h2 {
+    font-size: 4rem;
+}
+
+#work-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#work-container a,
+#work-container img,
+.project-container {
+    border-radius: 0.7rem;
+    width: 100%; /* Ensure the image spans the full width of its container */
+    height: 100%; /* Ensure the image spans the full height of its container */
+    max-height: 400px;
+    object-fit: cover; /* Resize the image to cover the container while preserving its aspect ratio */
+    object-position: center; /* Center the image within its container */
+    background-color: var(--black);
+    .project-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.7rem;
+    }
+}
+#work-container img {
+    border: solid 5px var(--black);
+}
+
+/* contact section */
+#contact {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
+#contactSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container form {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 3vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container form h3 {
+    color: var(--black);
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.container form input,
+form textarea {
+    font: var(--montserrat);
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #f5f5f5;
+    font-size: 1rem;
+}
+
+.container form button {
+    padding: 15px;
+    background: var(--blueButton);
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+
+.container form button:hover {
+    background: var(--blueHover);
+}
+
+/* nav section */
+nav {
+    font-family: var(--montserrat);
+    font-size: 80%;
+    padding: 2rem 1rem;
+}
+
+nav h1 a {
+    font-family: var(--montserrat);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav [class*='fa-'] {
+    font-size: 150%;
+    color: var(--blueButton);
+}
+
+nav h1 [class*='fa-'] {
+    font-size: 100%;
+    color: var(--blueButton);
+}
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+}
+
+nav .fa-solid.fa-code:hover {
+    color: var(--blueButton);
+}
+
+nav #homeButton:hover {
+    color: var(--ltblue);
+}
+
+nav a:hover,
+nav [class*='fa-']:hover {
+    color: var(--ltblue);
+}
+
+.button {
+    background-color: var(--blueButton);
+    color: var(--white);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--montserrat);
+    text-decoration: none;
+}
+.button:hover {
+    color: var(--white);
+    background-color: var(--blueHover);
+}
+
+/* projects section */
+#projects {
+    padding: 4rem 0rem;
+}
+#projects h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+    font-size: 2rem;
+    color: var(--ltblue);
+}
+
+#projects h4 {
+    padding: 1rem 0 0.5rem 0;
+    font-size: 1rem;
+    font-family: var(--montserrat);
+    margin: 0;
+}
+
+.blackbox {
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--black);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.project-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.7rem;
+}
+
+.project-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.4s ease;
+}
+
+.project-container .project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 2rem; /* Adjust as needed */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+}
+
+.project-container:hover img {
+    opacity: 0.1; /* Adjust the opacity value as needed */
+}
+
+.project-container:hover .project-title {
+    opacity: 1;
+}
+
+/* About Me section */
+#about-me {
+    padding: 4rem 1rem;
+}
+#about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#about-me h3 {
+    font-size: 2rem;
+    color: var(--ltblue);
+}
+#about-me p {
+    font-size: 0.85rem;
+    font-family: var(--montserrat);
+    margin: 0;
+}
+#about-me ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+#about-me img {
+    width: 100%;
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    border-radius: 25px;
+}
+
+/* footer section */
+footer {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+footer ul {
+    padding: 0;
+    margin: 2rem 0;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 3rem;
+}
+
+footer [class*='fa-'] {
+    color: var(--blueButton);
+}
+
+footer [class*='fa-']:hover {
+    color: var(--ltblue);
+}
+
+@keyframes transitionIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 800px) {
+    #intro {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+    }
+    #intro .profileImage {
+        text-align: end;
+    }
+    article {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+    }
+    #projects {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .text {
+        margin-top: 1.5rem;
+        grid-column: 7/12;
+        grid-row: 1/2;
+        order: 2;
+        text-align: right;
+    }
+
+    #about-me {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    #about-me img {
+        width: 100%;
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    #about-me ul {
+        justify-content: flex-end;
+    }
+    #about-me .reverse .text {
+        margin-top: 1.5rem;
+        grid-column: 1/6;
+        order: 2;
+        text-align: left;
+    }
+    #about-me .reverse img {
+        grid-column: 7/12;
+        grid-row: 1/2;
+    }
+    #about-me .reverse ul {
+        justify-content: flex-start;
+    }
+}
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
