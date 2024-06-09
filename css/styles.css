@@ -112,13 +112,23 @@ h2 {
 }
 
 #work-container a,
-#work-container img {
+#work-container img,
+.project-container {
     border-radius: 0.7rem;
     width: 100%; /* Ensure the image spans the full width of its container */
     height: 100%; /* Ensure the image spans the full height of its container */
     max-height: 400px;
     object-fit: cover; /* Resize the image to cover the container while preserving its aspect ratio */
     object-position: center; /* Center the image within its container */
+    background-color: var(--black);
+    .project-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0.7rem;
+    }
+}
+#work-container img {
+    border: solid 5px var(--black);
 }
 
 /* contact section */
@@ -282,6 +292,37 @@ nav [class*='fa-']:hover {
     background-color: var(--black);
     font-size: 1rem;
     line-height: 1.5;
+}
+.project-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.7rem;
+}
+
+.project-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.4s ease;
+}
+
+.project-container .project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 2rem; /* Adjust as needed */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    text-align: center;
+}
+
+.project-container:hover img {
+    opacity: 0.1; /* Adjust the opacity value as needed */
+}
+
+.project-container:hover .project-title {
+    opacity: 1;
 }
 
 /* About Me section */
