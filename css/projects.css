@@ -69,6 +69,16 @@ img {
     object-fit: contain; /* Ensure the image fits within the container while maintaining its aspect ratio */
 }
 
+iframe {
+    max-height: 550px; /* Set the maximum height */
+    width: 100%; /* Set the width to 100% of the container */
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    object-fit: contain; /* Ensure the iframe fits within the container while maintaining its aspect ratio */
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    border: 0px;
+}
+
 /* nav section */
 nav {
     font-family: var(--montserrat);
@@ -197,9 +207,7 @@ nav [class*='fa-']:hover {
 .project-description {
     display: flex;
     flex-direction: column;
-}
-.project-description .description {
-    padding-bottom: 1.3rem; /* Adjust this value as needed */
+    gap: 1.2rem;
 }
 .project-description a {
     align-items: flex-start;
@@ -208,7 +216,7 @@ nav [class*='fa-']:hover {
 #project-button {
     font-family: var(--montserrat);
     color: var(--white); /* Change the color to white */
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 
 #project-button:hover {
@@ -311,8 +319,6 @@ footer [class*='fa-']:hover {
     }
     #project img {
         width: 100%;
-        grid-column: 1/6;
-        grid-row: 1/2;
     }
     #project ul {
         justify-content: flex-end;
