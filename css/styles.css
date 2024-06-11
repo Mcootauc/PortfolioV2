@@ -58,7 +58,7 @@ h2 {
 
 /* intro styles */
 #intro {
-    padding: 5rem 1rem 10rem 1rem;
+    padding: 3rem 1rem 8rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -265,7 +265,7 @@ nav [class*='fa-']:hover {
 
 /* projects section */
 #projects {
-    padding: 4rem 0rem;
+    padding: 4rem 0rem 6rem 0rem;
 }
 #projects h2 {
     display: flex;
@@ -364,7 +364,7 @@ nav [class*='fa-']:hover {
 /* footer section */
 footer {
     text-align: center;
-    padding: 4rem 0;
+    padding: 2.5rem 0;
 }
 
 footer ul {
@@ -411,7 +411,7 @@ footer [class*='fa-']:hover {
         grid-template-columns: repeat(11, 1fr);
     }
     #projects {
-        max-width: 1400px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
