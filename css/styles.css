@@ -48,8 +48,11 @@ h2 {
 }
 
 /* background color divs */
-.section-dkblue {
+.section-contact {
     padding: 4rem 0 8rem 0;
+    background-color: var(--blueBackground);
+}
+.section-about-me {
     background-color: var(--blueBackground);
 }
 .section-navy {
@@ -284,8 +287,8 @@ nav [class*='fa-']:hover {
     font-family: var(--montserrat);
     margin: 0;
 }
-
 .blackbox {
+    margin-top: 0.5rem;
     padding: 1rem;
     border-radius: 10px;
     color: white;
@@ -331,16 +334,15 @@ nav [class*='fa-']:hover {
 }
 #about-me h2 {
     font-size: 2.5rem;
-    margin-bottom: calc(2.5rem * 1.5);
+    margin-bottom: calc(1.5rem * 1.5);
 }
 #about-me h3 {
     font-size: 2rem;
     color: var(--ltblue);
 }
 #about-me p {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-family: var(--montserrat);
-    margin: 0;
 }
 #about-me ul {
     list-style-type: none;
