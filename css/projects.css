@@ -54,17 +54,15 @@ h2 {
 
 /* background color divs */
 .section-dkblue {
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 2rem 0;
     background-color: var(--blueBackground);
 }
 .project-background {
     padding: 3rem 0 3rem 0;
     background-color: var(--blueBackground);
 }
-.section-navy {
-    background-color: var(--ltBlueBackground);
-}
 .project-img {
+    padding-bottom: 1.5rem;
     max-height: 550px; /* Set the maximum height */
     width: auto; /* Ensure the width adjusts automatically */
     object-fit: contain; /* Ensure the image fits within the container while maintaining its aspect ratio */
@@ -268,7 +266,7 @@ hr {
 /* footer section */
 footer {
     text-align: center;
-    padding: 4rem 0;
+    padding: 2.5rem 0;
 }
 
 footer ul {

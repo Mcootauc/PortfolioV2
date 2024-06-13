@@ -48,8 +48,11 @@ h2 {
 }
 
 /* background color divs */
-.section-dkblue {
-    padding: 1rem 0 10rem 0;
+.section-contact {
+    padding: 4rem 0 8rem 0;
+    background-color: var(--blueBackground);
+}
+.section-about-me {
     background-color: var(--blueBackground);
 }
 .section-navy {
@@ -59,7 +62,7 @@ h2 {
 
 /* intro styles */
 #intro {
-    padding: 5rem 1rem 10rem 1rem;
+    padding: 3rem 1rem 8rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -266,7 +269,7 @@ nav [class*='fa-']:hover {
 
 /* projects section */
 #projects {
-    padding: 4rem 0rem;
+    padding: 4rem 0rem 6rem 0rem;
 }
 #projects h2 {
     display: flex;
@@ -285,8 +288,8 @@ nav [class*='fa-']:hover {
     font-family: var(--montserrat);
     margin: 0;
 }
-
 .blackbox {
+    margin-top: 0.5rem;
     padding: 1rem;
     border-radius: 10px;
     color: white;
@@ -332,16 +335,15 @@ nav [class*='fa-']:hover {
 }
 #about-me h2 {
     font-size: 2.5rem;
-    margin-bottom: calc(2.5rem * 1.5);
+    margin-bottom: calc(1.5rem * 1.5);
 }
 #about-me h3 {
     font-size: 2rem;
     color: var(--ltblue);
 }
 #about-me p {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-family: var(--montserrat);
-    margin: 0;
 }
 #about-me ul {
     list-style-type: none;
@@ -365,7 +367,7 @@ nav [class*='fa-']:hover {
 /* footer section */
 footer {
     text-align: center;
-    padding: 4rem 0;
+    padding: 2.5rem 0;
 }
 
 footer ul {
@@ -412,7 +414,7 @@ footer [class*='fa-']:hover {
         grid-template-columns: repeat(11, 1fr);
     }
     #projects {
-        max-width: 1400px;
+        max-width: 1200px;
         margin: 0 auto;
     }
 
