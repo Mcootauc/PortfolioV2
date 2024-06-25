@@ -49,7 +49,7 @@ h2 {
 
 /* background color divs */
 .section-contact {
-    padding: 4rem 0 8rem 0;
+    padding: 1rem 0 8rem 0;
     background-color: var(--blueBackground);
 }
 .section-about-me {
@@ -121,15 +121,10 @@ h2 {
     border-radius: 0.7rem;
     width: 100%; /* Ensure the image spans the full width of its container */
     height: 100%; /* Ensure the image spans the full height of its container */
-    max-height: 400px;
+    max-height: 300px;
     object-fit: cover; /* Resize the image to cover the container while preserving its aspect ratio */
     object-position: center; /* Center the image within its container */
     background-color: var(--black);
-    .project-container {
-        position: relative;
-        overflow: hidden;
-        border-radius: 0.7rem;
-    }
 }
 #work-container img {
     border: solid 5px var(--black);
@@ -288,7 +283,40 @@ nav [class*='fa-']:hover {
     font-family: var(--montserrat);
     margin: 0;
 }
+.hobby-cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.hobby-card {
+    flex: 1;
+    margin: 0 1rem;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: center; /* Center the image within the container */
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobby-card:hover {
+    transform: scale(1.1);
+}
+
+.hobby-card:hover img {
+    transform: scale(1.1);
+}
+
 .blackbox {
+    width: 100%;
+    box-sizing: border-box;
     margin-top: 0.5rem;
     padding: 1rem;
     border-radius: 10px;
@@ -357,10 +385,6 @@ nav [class*='fa-']:hover {
 }
 #about-me img {
     width: 100%;
-    margin: 2rem 0 4rem 0;
-    padding: 1rem;
-    border-top: 1px solid var(--white);
-    border-bottom: 1px solid var(--white);
     border-radius: 25px;
 }
 
@@ -409,10 +433,6 @@ footer [class*='fa-']:hover {
     #intro .profileImage {
         text-align: end;
     }
-    article {
-        display: grid;
-        grid-template-columns: repeat(11, 1fr);
-    }
     #projects {
         max-width: 1200px;
         margin: 0 auto;
@@ -432,23 +452,16 @@ footer [class*='fa-']:hover {
     }
     #about-me img {
         width: 100%;
-        grid-column: 1/6;
-        grid-row: 1/2;
     }
     #about-me ul {
         justify-content: flex-end;
     }
     #about-me .reverse .text {
-        margin-top: 1.5rem;
-        grid-column: 1/6;
-        order: 2;
         text-align: left;
     }
     #about-me .reverse img {
-        grid-column: 7/12;
-        grid-row: 1/2;
     }
-    #about-me .reverse ul {
+    #about-me ul {
         justify-content: flex-start;
     }
 }
